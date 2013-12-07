@@ -9,5 +9,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :username, :password)}
   end
 
-  OPEN_PROFILE_TIME = Time.new(2013,12,6,21,0,0).to_i*1000
+  OPEN_PROFILE_TIME = Time.new(2013,12,6,22,0,0,'-06:00').to_i*1000
 end
