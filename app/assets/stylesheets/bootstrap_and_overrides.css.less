@@ -1,0 +1,65 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+body {
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+}
+
+.alert {
+  position: absolute;
+  width: 100%;
+  top: 2px;
+  text-align: center;
+  z-index: 99999;
+}
+
+.hero-unit {
+  margin: auto;
+  position: absolute;
+  top: 20%; left: 0; bottom: 20%; right: 0;
+  width: 45%;
+  opacity: .7;
+  background-color: rgba(0, 0, 0, .9);
+  color: white;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.hero-unit span {
+  font-size: xx-large;
+}
+
+.btn-group{
+  margin-top: 1%;
+  position: absolute;
+  top: 0px;
+  right: 1%;
+}

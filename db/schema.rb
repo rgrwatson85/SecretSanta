@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205062408) do
+ActiveRecord::Schema.define(version: 20131205180542) do
 
-  create_table "person", force: true do |t|
+  create_table "people", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "person_id"
     t.boolean  "is_selected"
+    t.string   "username",           default: '', null: false
+    #t.string   "email",              default: nil, null: true
+    t.string   "encrypted_password", default: '', null: false
   end
 
-  add_index "person", ["person_id"], name: "index_person_on_person_id"
+  add_index "people", ["person_id"], name: "index_people_on_person_id"
 
 end

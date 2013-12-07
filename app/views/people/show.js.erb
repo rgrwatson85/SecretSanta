@@ -1,0 +1,8 @@
+var response = '<%= j render template: 'people/show.html.erb' %>';
+response = $($.parseHTML(response))
+response.css('display', 'none');
+$('#content_area').fadeOut(700, function(){
+    $('#content_area').html(response);
+    response.fadeIn(700)
+    $('#content_area').fadeIn(700)
+});

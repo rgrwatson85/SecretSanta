@@ -1,14 +1,17 @@
-<p id="notice"><%= notice %></p>
+<%-
+    gifter = @person.first_name
+    giftee = @person.person_id ? @person.person.first_name : nil
+%>
+<div class="hero-unit">
+    <p>
+      <%- if giftee %>
+          <span><%= "You Are The Secret Santa For #{giftee}." %></span>
+          <br/><br/>
+          <%= "Happy Holidays #{gifter}." %>
+      <%- else %>
+          <%=  'Please wait until a random person is assigned to you.' %>
+      <%- end %>
+    </p>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
